@@ -1,6 +1,7 @@
 import logo from './logo.svg';
 import './App.css';
-import ListArea from './ListArea.js'
+import ListArea from './components/ListArea/ListArea.js'
+import { ListContextProvider } from "./context";
 
 function App() {
   return (
@@ -8,18 +9,20 @@ function App() {
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
       </header>
-      <div class='main-body'>
-        <div class='input-area'>
-          <ListArea title="List A"></ListArea>  
-          <ListArea title="List B"></ListArea>
+      <ListContextProvider>
+      <div className='main-body'>
+        <div className='input-area'>
+          <ListArea title="List A" listIndex="0"></ListArea>  
+          <ListArea title="List B" listIndex="1"></ListArea>
         </div>
 
-        <div class="answer-area">
-          <ListArea title="Only in List A" readonly="true"></ListArea>  
-          <ListArea title="In both" readonly="true"></ListArea>
-          <ListArea title="Only in List B" readonly="true"></ListArea>  
+        <div className="answer-area">
+          <ListArea title="Only in List A" listIndex="0" readonly="true"></ListArea>  
+          <ListArea title="In both" listIndex="2" readonly="true"></ListArea>
+          <ListArea title="Only in List B" listIndex="1" readonly="true"></ListArea>  
         </div>
       </div>
+      </ListContextProvider>
     </div>
   );
 }
