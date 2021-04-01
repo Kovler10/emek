@@ -1,7 +1,6 @@
 import './ListArea.css';
 import React, {useContext, useEffect, useState} from 'react';
 import {ListContext} from '../../context'
-import _ from 'lodash'
 
 function ListArea({title, listIndex=-1, readonly=false}){
     
@@ -10,24 +9,20 @@ function ListArea({title, listIndex=-1, readonly=false}){
 
     useEffect(() => {
         if(readonly){
-            const displayList = _.join(getListByIndex(listIndex), '\n')
+            const displayList = getListByIndex(listIndex).join('\n')
             setValue(displayList)
         }
     }, [listA, listB, getListByIndex, listIndex, readonly])
 
     const onTextInput = (event) => {
         setValue(event.target.value);
-        console.log(event.target.value)
-        const valueList = _.split(event.target.value, '\n')
-        console.log(valueList)
+        const valueList = event.target.value.split('\n')
         setListByIndex(valueList,listIndex)
     }
-
-    const isReadonly = readonly === "true"? true: false
     return (
     <div>
             <div className="input-box-title">{title}</div>
-            <textarea readOnly={isReadonly} className="input-box" value={value} onChangeCapture={onTextInput}></textarea>
+            <textarea readOnly={readonly} className="input-box" value={value} onChangeCapture={onTextInput}></textarea>
     </div>
     )
 }

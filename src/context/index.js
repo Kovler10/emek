@@ -1,5 +1,4 @@
 export {
-    Context as ListContext,
-    Provider as ListContextProvider,
-    Consumer as ListContextConsumer
-  } from "./ListContext.js";
+  Context as ListContext,
+  Provider as ListContextProvider,
+} from "./ListContext.js";
