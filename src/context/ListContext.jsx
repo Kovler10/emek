@@ -1,4 +1,4 @@
-import React, { createContext, useState, useMemo } from "react";
+import React, { createContext, useState, useMemo, useContext } from "react";
 import {compact, uniq, difference, intersection} from "lodash";
 
 const Provider = (props) => {
@@ -49,8 +49,8 @@ Provider.defaultProps = {
 };
 
 const Context = createContext({});
-
+const useListContext = () => useContext(Context);
 export {
   Provider as ListContextProvider,
-  Context as ListContext
+  useListContext
 }

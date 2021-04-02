@@ -1,14 +1,12 @@
 import "./ListArea.css";
-import React, { useContext, useEffect, useState } from "react";
-import { ListContext } from "../../context/ListContext.jsx";
+import React, { useEffect, useState } from "react";
+import { useListContext } from "../../context/ListContext.jsx";
 
 const ListArea = ({ title, listIndex = -1, readonly = false }) => {
   const [value, setValue] = useState();
   const [delim, setDelim] = useState("\n");
   const [wrapper, setWrapper] = useState("");
-  const { listA, listB, setListByIndex, getListByIndex } = useContext(
-    ListContext
-  );
+  const { listA, listB, setListByIndex, getListByIndex } = useListContext();
 
   useEffect(() => {
     if (readonly) {
