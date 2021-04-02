@@ -11,16 +11,3 @@
   background-color: coral;
   width: 100%;
 }
-
-.input-label {
-  color:azure;
-}
-
-.input-text {
-  width: 5vw;
-}
-
-.input-box-controls {
-  display: flex;
-  justify-content: space-between;
-}
