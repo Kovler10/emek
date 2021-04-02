@@ -1,6 +1,7 @@
 .input-box {
   background-color: blanchedalmond;
   height: 30vh;
+  width: 100%;
 }
 
 .input-box-title {
@@ -8,4 +9,5 @@
   font-size: larger;
   font-weight: bold;
   background-color: coral;
+  width: 100%;
 }

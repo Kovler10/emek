@@ -7,6 +7,9 @@ const ListContextProvider = (props) => {
   const [listA, setListA] = useState(initialListA);
   const [listB, setListB] = useState(initialListB);
 
+  const [delimiter, setDelimiter] = useState('\n');
+  const [wrapper, setWrapper] = useState('');
+
   const listSetters = [setListA, setListB];
 
   const onlyAValues = useMemo(
@@ -38,6 +41,10 @@ const ListContextProvider = (props) => {
   const listContext = {
     setListByIndex,
     getListByIndex,
+    delimiter,
+    setDelimiter,
+    wrapper,
+    setWrapper
   };
 
   return <Context.Provider value={listContext}>{children}</Context.Provider>;
