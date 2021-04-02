@@ -5,7 +5,7 @@
 
 .input-text {
   width: 5vw;
-  margin-block-start: 2vw;
+  margin-inline-start: 2vw;
 }
 
 .input-box-controls {
