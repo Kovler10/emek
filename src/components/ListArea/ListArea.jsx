@@ -10,7 +10,7 @@ const ListArea = ({ title, listIndex = -1, readonly = false }) => {
   useEffect(() => {
     if (readonly) {
       const displayList = getListByIndex(listIndex)
-        .map((value) => wrapper + value + wrapper)
+        .map((value) => `${wrapper}${value}${wrapper}`)
         .join(delimiter);
       setValue(displayList);
     }
