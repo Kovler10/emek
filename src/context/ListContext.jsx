@@ -1,7 +1,7 @@
 import React, { createContext, useState, useMemo } from "react";
 import {compact, uniq, difference, intersection} from "lodash";
 
-export const Provider = (props) => {
+const Provider = (props) => {
   const { listA: initialListA, listB: initialListB, children } = props;
 
   const [listA, setListA] = useState(initialListA);
@@ -48,5 +48,9 @@ Provider.defaultProps = {
   listB: [],
 };
 
-export const Context = createContext({});
+const Context = createContext({});
 
+export {
+  Provider as ListContextProvider,
+  Context as ListContext
+}

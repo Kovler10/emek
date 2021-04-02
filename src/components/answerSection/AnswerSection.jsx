@@ -1,4 +1,4 @@
-import ListArea from "../ListArea/ListArea.js";
+import ListArea from "../ListArea/ListArea.jsx";
 import "./AnswerSection.css";
 function AnswerSection() {
   return (

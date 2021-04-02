@@ -1,4 +1,4 @@
-import ListArea from '../ListArea/ListArea.js'
+import ListArea from '../ListArea/ListArea.jsx'
 import './InputSection.css'
 function InputSection() {
     return (

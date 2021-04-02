@@ -1,8 +1,8 @@
 import logo from './logo.svg';
 import './App.css';
-import { ListContextProvider } from "./context";
-import InputSection from './components/inputSection/InputSection';
-import AnswerSection from './components/answerSection/AnswerSection';
+import { ListContextProvider } from "./context/ListContext";
+import InputSection from './components/inputSection/InputSection.jsx';
+import AnswerSection from './components/answerSection/AnswerSection.jsx';
 
 function App() {
   return (

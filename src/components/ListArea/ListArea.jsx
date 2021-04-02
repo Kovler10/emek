@@ -1,6 +1,6 @@
 import './ListArea.css';
 import React, {useContext, useEffect, useState} from 'react';
-import {ListContext} from '../../context'
+import {ListContext} from '../../context/ListContext.jsx'
 
 function ListArea({title, listIndex=-1, readonly=false}){
     
