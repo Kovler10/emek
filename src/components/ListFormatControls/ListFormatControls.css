@@ -1,0 +1,15 @@
+.input-label {
+  color: azure;
+  margin-inline-start: 2vw;
+}
+
+.input-text {
+  width: 5vw;
+  margin-inline-start: 2vw;
+}
+
+.input-box-controls {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
