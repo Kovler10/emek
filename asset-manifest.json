@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/emek/static/css/main.7c1bad48.css",
+    "main.js": "/emek/static/js/main.ef1da456.js",
+    "static/js/453.1bf69ab3.chunk.js": "/emek/static/js/453.1bf69ab3.chunk.js",
+    "static/media/compare-icon.png": "/emek/static/media/compare-icon.0dc3b11828dc29486edb.png",
+    "index.html": "/emek/index.html",
+    "main.7c1bad48.css.map": "/emek/static/css/main.7c1bad48.css.map",
+    "main.ef1da456.js.map": "/emek/static/js/main.ef1da456.js.map",
+    "453.1bf69ab3.chunk.js.map": "/emek/static/js/453.1bf69ab3.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.7c1bad48.css",
+    "static/js/main.ef1da456.js"
+  ]
+}
