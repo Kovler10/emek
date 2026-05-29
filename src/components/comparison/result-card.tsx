@@ -1,4 +1,3 @@
-import { useMemo } from "react";
 import { CopyIcon } from "lucide-react";
 
 import { Button } from "../ui/button";
@@ -13,9 +12,7 @@ interface ResultCardProps {
 
 export const ResultCard = ({ title, values, wrapper, delimiter }: ResultCardProps) => {
 
-    const displayValue = useMemo(() => {
-        return values.map(value => `${wrapper}${value}${wrapper}`).join(`${delimiter}${delimiter === '\n' ? '' : '\n'}`);
-    }, [values, wrapper, delimiter]);
+    const displayValue = values.map(value => `${wrapper}${value}${wrapper}`).join(`${delimiter}${delimiter === '\n' ? '' : '\n'}`);
 
     const handleCopy = () => {
         navigator.clipboard.writeText(displayValue);
