@@ -1,5 +1,6 @@
 import type { Dispatch, SetStateAction } from "react";
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "../ui/select";
+
+import { Input } from "../ui/input";
 
 interface ToolBarProps {
     delimiter: string;
@@ -8,43 +9,17 @@ interface ToolBarProps {
     setWrapper: Dispatch<SetStateAction<string>>;
 }
 
-const delimiterOptions = [
-    { value: "\n", label: "New Line" },
-    { value: ",", label: "Comma" },
-    { value: ";", label: "Semicolon" },
-    { value: "\t", label: "Tab" },
-];
-
-const wrapperOptions = [
-    { value: `"`, label: "Double Quote" },
-    { value: `'`, label: "Single Quote" },
-];
-
 export const ToolBar = ({ delimiter, wrapper, setDelimiter, setWrapper }: ToolBarProps) => {
     return (
-        <div className="w-full h-5 flex justify-center gap-5 items-center text-white">
-            <p>Delimiter:</p>
-            <Select value={delimiter} onValueChange={setDelimiter}>
-                <SelectTrigger>
-                    <SelectValue placeholder="Select a delimiter" />
-                </SelectTrigger>
-                <SelectContent>
-                    {delimiterOptions.map((option) => (
-                        <SelectItem key={option.value} value={option.value}>{option.label}</SelectItem>
-                    ))}
-                </SelectContent>
-            </Select>
-            <p>Wrapper:</p>
-            <Select value={wrapper} onValueChange={setWrapper}>
-                <SelectTrigger>
-                    <SelectValue placeholder="Select a wrapper" />
-                </SelectTrigger>
-                <SelectContent>
-                    {wrapperOptions.map((option) => (
-                        <SelectItem key={option.value} value={option.value}>{option.label}</SelectItem>
-                    ))}
-                </SelectContent>
-            </Select>
+        <div className="w-full h-5 flex justify-around  text-white">
+            <div className="flex items-center gap-2 w-1/4">
+                <p>Delimiter:</p>
+                <Input type="text" placeholder="Enter a delimiter" value={delimiter} onChange={(e) => setDelimiter(e.target.value)} />
+            </div>
+            <div className="flex items-center gap-2 w-1/4">
+                <p>Wrapper:</p>
+                <Input type="text" placeholder="Enter a wrapper" value={wrapper} onChange={(e) => setWrapper(e.target.value)} />
+            </div>
         </div>
     )
 }
